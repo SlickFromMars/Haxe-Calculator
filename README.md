@@ -44,6 +44,5 @@ Run EACH one of these commands!!!
 haxelib install flixel
 haxelib install flixel-addons
 haxelib install flixel-ui
-haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc
 haxelib git slick_modding https://github.com/SlickFromMars/Slick-Modding
 ```
