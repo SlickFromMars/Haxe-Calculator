@@ -18,12 +18,22 @@ class CalculatorState extends FlxState
 	{
 		loadSave();
 
+		super.create();
+	}
+
+	function makeNumPad():Void
+	{
 		var zeroButton = new FlxButton(50, FlxG.height / 2, '0', function()
 		{
 			buttonPressed('0');
 		});
+		add(zeroButton);
 
-		super.create();
+		var eightButton = new FlxButton(50, FlxG.height / 2, '0', function()
+		{
+			buttonPressed('8');
+		});
+		add(eightButton);
 	}
 
 	override public function update(elapsed:Float)
@@ -52,5 +62,14 @@ class CalculatorState extends FlxState
 		}
 	}
 
-	function buttonPressed(name:String):Void {}
+	function buttonPressed(name:String):Void
+	{
+		switch (name)
+		{
+			case '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9':
+				operation += name;
+		}
+
+		trace(operation);
+	}
 }
